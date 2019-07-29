@@ -7,9 +7,8 @@ using UnityEngine;
 /// </summary>
 public class Bar : MonoBehaviour
 {
+    //Счетчик уровня
     private int level = 0;
-    private int money = 0;
-
     public int GetLevel()
     {
         return level;
@@ -18,6 +17,9 @@ public class Bar : MonoBehaviour
     {
         level = _lvl;
     }
+
+    //Счетчик денег
+    private int money = 0;
     public int GetMoney()
     {
         return money;
@@ -26,16 +28,11 @@ public class Bar : MonoBehaviour
     {
         money = _money;
     }
-
-    // Start is called before the first frame update
-    void Start()
+    
+    //Счетчик трофеев
+    private List<GameObject> trophy = new List<GameObject>();
+    public void AddTrophy(GameObject _trophy)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        trophy.Add(_trophy);
     }
 }
